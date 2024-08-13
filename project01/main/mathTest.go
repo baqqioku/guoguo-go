@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"project01/day02"
 	"time"
 )
 
@@ -31,6 +32,8 @@ func main() {
 	//testBreakLoop()
 	testBreak2()
 	testSwitch()
+	day02.NoName()
+	day02.TestNoneName()
 
 }
 
