@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"project01/day02"
+	"project01/day03"
 	"time"
 )
 
@@ -25,15 +25,29 @@ func main() {
 
 	//fmt.Println(math.Sin(1))
 	//test1()
-	testIota()
-	testIosta2()
-	testLeft()
-	testLoop()
+	//testIota()
+	//testIosta2()
+	//testLeft()
+	//testLoop()
 	//testBreakLoop()
-	testBreak2()
-	testSwitch()
-	day02.NoName()
-	day02.TestNoneName()
+	//testBreak2()
+	//testSwitch()
+	//day02.NoName()
+	//day02.TestNoneName()
+	//day03.TestArray()
+	//day03.Balance()
+	day03.VariaArray()
+	day03.ManyString()
+
+	/* 数组长度为 5 */
+	var balance = [5]int{1000, 2, 3, 17, 50}
+	var avg float32
+
+	/* 数组作为参数传递给函数 */
+	avg = day03.GetAverage(balance, 5)
+
+	/* 输出返回的平均值 */
+	fmt.Printf("平均值为: %f ", avg)
 
 }
 
