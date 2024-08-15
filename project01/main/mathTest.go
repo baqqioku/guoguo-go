@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"project01/day03"
+	"project01/day04"
 	"time"
 )
 
@@ -48,6 +49,27 @@ func main() {
 
 	/* 输出返回的平均值 */
 	fmt.Printf("平均值为: %f ", avg)
+
+	var z int = 100
+	var x int = 200
+
+	day04.Swap(&z, &x)
+
+	fmt.Printf("交换后，z 的值 : %d\n", z)
+	fmt.Printf("交换后，x 的值 : %d\n", x)
+
+	myArray := [5]int{1, 2, 3, 4, 5}
+
+	fmt.Println(myArray)
+	day04.ModifyArray(myArray)
+
+	fmt.Println(myArray)
+	day04.ModifyArrayWithPointer(&myArray)
+	fmt.Println(myArray)
+
+	day04.Pptr()
+
+	day04.MakeSlice()
 
 }
 
