@@ -2,6 +2,7 @@ package day04
 
 import (
 	"fmt"
+	"strconv"
 )
 
 func Swap(x *int, y *int) {
@@ -109,4 +110,48 @@ func MakeSlice() {
 	fmt.Println("Slice after exceeding capacity:", nums)         // Outputs: [10 20 30 40 50 60]
 	fmt.Println("Length after exceeding capacity:", len(nums))   // Outputs: 6
 	fmt.Println("Capacity after exceeding capacity:", cap(nums)) // Outputs: 10 or more
+}
+
+func Range() {
+	var pow = []int{1, 2, 3, 4, 45, 5}
+
+	for i, v := range pow {
+		fmt.Printf("2**%d = %d\n", i, v)
+	}
+}
+
+func Map() map[string]int {
+	m := map[string]int{
+		"apple":  1,
+		"mango":  2,
+		"orange": 3,
+	}
+	return m
+}
+
+func convertStr() {
+	str := "123"
+	num, err := strconv.Atoi(str)
+	if err != nil {
+		fmt.Println("convert err:", err)
+	} else {
+		fmt.Printf("字符串 '%s' 转换为整数为：%d\n", str, num)
+	}
+}
+
+func converNum() {
+	num := 123
+	str := strconv.Itoa(num)
+	fmt.Println(str)
+}
+
+func converFloat() {
+	str := "3.14"
+	num, err := strconv.ParseFloat(str, 64)
+	if err != nil {
+		fmt.Println("转换错误:", err)
+	} else {
+		fmt.Printf("字符串 '%s' 转为浮点型为：%f\n", str, num)
+	}
+
 }
