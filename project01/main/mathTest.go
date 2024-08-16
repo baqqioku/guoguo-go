@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"project01/day03"
 	"project01/day04"
+	"project01/day05"
 	"time"
 )
 
@@ -70,6 +71,11 @@ func main() {
 	day04.Pptr()
 
 	day04.MakeSlice()
+
+	day05.InterfaceUp()
+	day05.InterfaceMock()
+	day05.NewStringWriter()
+	day05.TestDivide()
 
 }
 
