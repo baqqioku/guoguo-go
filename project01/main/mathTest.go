@@ -5,6 +5,7 @@ import (
 	"project01/day03"
 	"project01/day04"
 	"project01/day05"
+	"project01/day06"
 	"time"
 )
 
@@ -76,6 +77,7 @@ func main() {
 	day05.InterfaceMock()
 	day05.NewStringWriter()
 	day05.TestDivide()
+	day06.GoRe()
 
 }
 
