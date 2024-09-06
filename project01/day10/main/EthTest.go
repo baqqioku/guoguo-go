@@ -6,6 +6,8 @@ import (
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/ethclient"
 	"log"
+	"math"
+	"math/big"
 )
 
 func main() {
@@ -30,4 +32,20 @@ func main() {
 	}
 
 	fmt.Println(balance) // 25893180161173005034
+
+	blockNumber := big.NewInt(5532993)
+	balanceAt, err := client.BalanceAt(context.Background(), account, blockNumber)
+
+	if err != nil {
+		log.Fatal("aaaa", err)
+	}
+	fmt.Print(balanceAt)
+
+	fbalance := new(big.Float)
+	fbalance.SetString(balance.String())
+	ethValue := new(big.Float).Quo(fbalance, big.NewFloat(math.Pow10(18)))
+	fmt.Println(ethValue)
+
+	pendingBalance, err := client.PendingBalanceAt(context.Background(), account)
+	fmt.Println(pendingBalance)
 }

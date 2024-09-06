@@ -79,6 +79,8 @@ func main() {
 	day05.TestDivide()
 	day06.GoRe()
 
+	day04.RangeTest()
+
 }
 
 func test1() {
